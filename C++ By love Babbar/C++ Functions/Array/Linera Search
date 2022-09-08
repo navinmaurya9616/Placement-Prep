@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+int linearSearch(int arr[],int size,int key){
+    for(int i=0;i<size;i++){
+        if(key==arr[i]){
+            return 1;
+        }
+    }
+    return 0;
+}
+
+int main()
+{
+    int arr[100]={2,5,7,9,3,-11,22,-44};
+    cout<<"Enter The Key to Search:";
+    int key;
+    cin>>key;
+    bool found=linearSearch(arr,10,key);
+    if(found){
+        cout<<"Key IS Present!";
+    }else{
+        cout<<"Key IS Absent";
+    }
+}
